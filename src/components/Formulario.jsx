@@ -24,13 +24,13 @@ const Formulario = () => {
   }
   const handleDelete = (e, id) => {
     e.preventDefault()
-    setUsers(users.filter((user) => user.id != id))
+    setUsers(users.filter((user) => user.id !== id))
   }
 
   const handleEdit = (e, id) => {
     e.preventDefault()
-    const dataForm = users.find((tumama) => tumama.id == id)
-    setUsers(users.filter((user) => user.id != id))
+    const dataForm = users.find((tumama) => tumama.id === id)
+    setUsers(users.filter((user) => user.id !== id))
     setForm({
       id: dataForm.id,
       name: dataForm.name,

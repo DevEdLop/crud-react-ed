@@ -18,35 +18,35 @@ const Formulario = () => {
   const [form, setForm] = useState(userForm)
 
   const handleSubmit = (form) => {
-    if (form.id == "") {
+    if (form.id === "") {
       Swal.fire('ERROR!', `la identificacion es obligatoria`, 'error')
       return false
     }
-    else if (form.name == "") {
+    else if (form.name === "") {
       Swal.fire('ERROR!', `el nombre es obligatorio`, 'error')
       return false
     }
-    else if (form.lastName == "") {
+    else if (form.lastName === "") {
       Swal.fire('ERROR!', `el apellido es obligatorio`, 'error')
       return false
     }
-    else if (form.address == "") {
+    else if (form.address === "") {
       Swal.fire('ERROR!', `la direccion es obligatoria`, 'error')
       return false
     }
-    else if (form.phone == "") {
+    else if (form.phone === "") {
       Swal.fire('ERROR!', `el telefono es obligatorio`, 'error')
       return false
     }
-    else if (form.city == "") {
+    else if (form.city === "") {
       Swal.fire('ERROR!', `la ciudad es obligatoria`, 'error')
       return false
     }
-    else if (form.country == "") {
+    else if (form.country === "") {
       Swal.fire('ERROR!', `el pais es obligatorio`, 'error')
       return false
     }
-    else if (form.gender == "") {
+    else if (form.gender === "") {
       Swal.fire('ERROR!', `el genero es obligatorio`, 'error')
       return false
     }

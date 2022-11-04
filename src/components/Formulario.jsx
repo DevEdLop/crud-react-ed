@@ -86,7 +86,7 @@ const Formulario = () => {
 
   const handleEdit = (e, id) => {
     e.preventDefault()
-    const dataForm = users.find((tumama) => tumama.id === id)
+    const dataForm = users.find((user) => user.id === id)
     setUsers(users.filter((user) => user.id !== id))
     setForm({
       id: dataForm.id,

@@ -52,7 +52,6 @@ const Formulario = () => {
           <div className="row g-4">
             <div className="col-12 col-lg-4">
               <div className="card card-body">
-                <form id="saveUserForm">
                   <h2 className="card-title">Añadir Usuario</h2>
                   <div className="my-2">
                     <label className="form-label">Identificacion</label>
@@ -109,7 +108,7 @@ const Formulario = () => {
                       aria-placeholder="sexito"
                       value={form.gender}
                       onChange={(e) => setForm({ ...form, gender: e.target.value })}>
-                      <option value="" disabled selected>Seleccione
+                      <option value="" disabled>Seleccione
                         un genero...</option>
                       <option value="Masculino">Masculino</option>
                       <option value="Femenino">Femenino</option>
@@ -121,7 +120,7 @@ const Formulario = () => {
                       onClick={handleAdd}>Añadir</button>
                     <button id="btnClean" className="btn btn-primary">Limpiar</button>
                   </div>
-                </form>
+                
               </div>
             </div>
             <div className="col-12 col-lg-8">
@@ -141,9 +140,9 @@ const Formulario = () => {
                     </tr>
                   </thead>
                   <tbody id="usersTable">
-                    {users.map((user) => {
+                    {users.map((user,index) => {
                       return (
-                        <tr>
+                        <tr key={index}>
                           <td>{user.id}</td>
                           <td>{user.name}</td>
                           <td>{user.lastName}</td>

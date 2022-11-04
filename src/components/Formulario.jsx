@@ -105,7 +105,6 @@ const Formulario = () => {
                     <label className="form-label">Genero</label>
                     <select className="form-select" name="gender"
                       id="select_gender"
-                      aria-placeholder="sexito"
                       value={form.gender}
                       onChange={(e) => setForm({ ...form, gender: e.target.value })}>
                       <option value="" disabled>Seleccione
